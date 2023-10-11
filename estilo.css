@@ -12,6 +12,7 @@
     font-style: normal;
 }
 :root{
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
     --fonte-cabeçalho: 'Passion One', cursive;
     --fonte-textos: 'Sriracha', cursive;
 }
@@ -24,6 +25,7 @@
 html,body{
     min-height: 100vh;
     background-color: darkgrey;
+    font-family: var(--fonte1);
 }
 
 header{
@@ -36,7 +38,7 @@ header > h1{
     font-family: var(--fonte-cabeçalho);
     font-variant: small-caps;
     padding-top: 50px;
-    
+    font-size: 10vw;
 }
 header > p{
     color: white;
@@ -52,17 +54,19 @@ header > p > a{
     color: white;
     font-weight: bold;
 }
-main p{
-    font-family: var(--fonte-textos)
-}
 
 section{
     padding-left: 30px;
     padding-top: 10vh;
     padding-bottom: 10vh;
     line-height: 2em;
+    font-family: var(--fonte-textos);
+    font-size: 3vw;
+    
 }
-
+section > p{
+    padding-bottom: 2em;
+}
 section.normal{
     background-color: white;
     color: black;
@@ -70,9 +74,25 @@ section.normal{
 section.imagem{
     background-color: rgba(51, 51, 51, );
     color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.486);
+    background-size: cover;
+    background-attachment: fixed;
 }
 section.imagem > p{
-    background-color: rgba(0, 0, 0, 0.253);
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.507);
+    text-shadow: 1px 1px 0px black;
+}
+section#img01{
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+    background-size: cover;
+}
+section#img02{
+    background-image: url(imagens/background002.jpg);
+    background-size: cover;
+    background-position: right center;
 }
 footer{
     background-color: black;
